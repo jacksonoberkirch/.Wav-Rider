@@ -1,0 +1,12 @@
+C:\Users\Jackson\source\repos\RecordTest\RecordTest\bin\Debug\RecordTest.exe.config
+C:\Users\Jackson\source\repos\RecordTest\RecordTest\bin\Debug\RecordTest.exe
+C:\Users\Jackson\source\repos\RecordTest\RecordTest\bin\Debug\RecordTest.pdb
+C:\Users\Jackson\source\repos\RecordTest\RecordTest\bin\Debug\NAudio.dll
+C:\Users\Jackson\source\repos\RecordTest\RecordTest\obj\Debug\RecordTest.csprojAssemblyReference.cache
+C:\Users\Jackson\source\repos\RecordTest\RecordTest\obj\Debug\RecordTest.Form1.resources
+C:\Users\Jackson\source\repos\RecordTest\RecordTest\obj\Debug\RecordTest.Properties.Resources.resources
+C:\Users\Jackson\source\repos\RecordTest\RecordTest\obj\Debug\RecordTest.csproj.GenerateResource.cache
+C:\Users\Jackson\source\repos\RecordTest\RecordTest\obj\Debug\RecordTest.csproj.CoreCompileInputs.cache
+C:\Users\Jackson\source\repos\RecordTest\RecordTest\obj\Debug\RecordTest.csproj.CopyComplete
+C:\Users\Jackson\source\repos\RecordTest\RecordTest\obj\Debug\RecordTest.exe
+C:\Users\Jackson\source\repos\RecordTest\RecordTest\obj\Debug\RecordTest.pdb
