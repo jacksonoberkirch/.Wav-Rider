@@ -17,14 +17,14 @@ namespace WavRider
     {
         WaveOutEvent waveOut;
 
-        bool isPlaying = false;
-        string currentSong = null;
+        bool isPlaying = false; //boolean to determine if a song is currently playing
+        string currentSong = null; //used in playback functions to determine the song currently being used in playback
        // List<string> songList = new List<string>();
 
-        Mp3FileReader mp3Reader;
-        WaveFileReader waveReader;
-        List<string> songList = new List<string>();
-        //SongList songList = new SongList("C:\\Users\\Owner\\Desktop\\MusicShite");
+        Mp3FileReader mp3Reader; //file reader for .mp3 files
+        WaveFileReader waveReader; //file reader for .wav files
+        List<string> songList = new List<string>(); //list to store song file strings
+        //SongList songList = new SongList("C:\\Users\\Owner\\Desktop\\MusicStuff");
 
 
         public Form1()
@@ -34,12 +34,12 @@ namespace WavRider
             if (open.ShowDialog() != DialogResult.OK) return;
             // DisposeWave();
             string name = open.SafeFileName; */
-            groupBox2 = new GroupBox();
+            groupBox2 = new GroupBox(); //group box that will show which song is currently used in playback
           //  MessageBox.Show();
-            songList.Add(this.GetType().Assembly.Location.Replace("WavRider.exe", "September.wav"));
-            currentSong = songList[0];
+            songList.Add(this.GetType().Assembly.Location.Replace("WavRider.exe", "September.wav")); //add an initial song
+            currentSong = songList[0]; //set current song to beginning of list for playback
             string textSong = currentSong;
-            CheckSong(songList[0]);
+            CheckSong(songList[0]); 
             //MessageBox.Show(name);
             InitializeComponent();
 
@@ -102,7 +102,9 @@ namespace WavRider
         {
            
         }
-
+        /**
+        * Function for play/pause. This function determines whether to play the song currently loaded for playback
+        **/
         private void button7_Click(object sender, EventArgs e)
         {
 
@@ -119,7 +121,9 @@ namespace WavRider
                 isPlaying = true;
             }
         }
-
+        /**
+        * Function for skipping songs. Sets the current song to the next song in the list, if it is the last song then the program loads the first song for playback
+        */
         private void button8_Click(object sender, EventArgs e)
         {
             if (currentSong.Equals(songList[songList.Count - 1])) {
@@ -201,7 +205,9 @@ namespace WavRider
 
 
         }
-
+        /**
+        * Checks to see if the file is a .wav or .mp3
+        **/
         private void CheckSong(string song) {
             waveOut = new WaveOutEvent();
 
@@ -230,7 +236,11 @@ namespace WavRider
 
             }
             */
-
+        /**
+        * Function for rewinding. If the song has been playing for three seconds or more, it rewinds to the beginning of the song.
+        * If the song has been playing for three seconds or fewer, it rewinds to the beginning of the song. If the 
+        * song is the first one in the list, then it will rewind the song to the beginning, regardless of the amount of time it has been playing
+        **/
         private void button9_Click(object sender, EventArgs e) {
             if (currentSong.Equals(songList[0]) && currentSong.Contains(".mp3") && mp3Reader.CurrentTime <= TimeSpan.FromSeconds(3.0))
                 mp3Reader.CurrentTime = TimeSpan.FromSeconds(0.0);
